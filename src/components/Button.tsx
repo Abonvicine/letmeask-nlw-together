@@ -1,19 +1,12 @@
-import {useState} from 'react'
+import {ButtonHTMLAttributes} from 'react'
+import "../styles/button.scss"
 
-export function Button(){
+//{...props} operador de spread (estudar depois)
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-    const [counter, setCounter] = useState(0);
+export function Button(props:ButtonProps){
 
-    function attCounter(){
-        setCounter(counter + 1);
-    }
-    function rstCounter(){
-        setCounter(0)
-    }
     return(
-        <div>
-            <button onClick ={attCounter}>{counter}</button>
-            <button onClick ={rstCounter}>Resetar</button>
-        </div>
+        <button className="button" {...props}/>
     )
 }
