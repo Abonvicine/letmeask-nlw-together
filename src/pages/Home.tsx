@@ -38,6 +38,15 @@ export function Home(){
             return;
         }
 
+        if (!roomRef.exists()){
+            alert("Sala não existente");
+            return;
+        }
+        
+        if (roomRef.val().endedAt){
+            alert(`Esta sala foi encerrada em ${roomRef.val().endedAt}`)
+            return;
+        }
         history.push(`/rooms/${roomCode}`);
     }
 
