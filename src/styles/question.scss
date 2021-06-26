@@ -12,6 +12,22 @@
         color:#29292e;
     }
 
+
+    &.highlighted{
+        background: #F4f0ff;
+        border: 1px solid #835afd;
+
+        footer .user-info{
+            color: #29292E
+        }
+    }
+
+    &.answered{
+        background: #DBDCDD;
+        border: none;
+    }
+
+
     footer{
         display: flex;
         justify-content: space-between;
@@ -33,6 +49,11 @@
                         color: #737380;
                         font-size: 14px;
                     }
+        }
+
+        > div {
+            display: flex;
+            gap: 16px;
         }
 
         button{
